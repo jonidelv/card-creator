@@ -4,12 +4,11 @@ Material Design cards generator by a data form.
 Card-creator **tdont use jQuery** and the menus are only css.
 
 ### Create a new Card###
-<img src="http://delvallejonatan.com/cardcreator/img/1.png" width="200" height="200" />
+<img src="http://delvallejonatan.com/cardcreator/img/1.png" width="100"/>
 ### Load data###
-![load data1](http://delvallejonatan.com/cardcreator/img/2.png =250)
-
-![load data 2](http://delvallejonatan.com/cardcreator/img/3.png =250)
+<img src="http://delvallejonatan.com/cardcreator/img/2.png" width="100"/>
+<img src="http://delvallejonatan.com/cardcreator/img/3.png" width="100"/>
 
 ### Clone and Remove###
-![clone and remove](http://delvallejonatan.com/cardcreator/img/4.png =250)
+<img src="http://delvallejonatan.com/cardcreator/img/4.png" width="100"/>
 
