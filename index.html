@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1"/>
+    <title>Card Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/reset.css" charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css" charset="utf-8">
+  </head>
+  <body>
+    <header class="clearfix">
+      <div class="logo">
+			     <a href="index.html" class="logo-a">
+             <img class="logo-img" src="img/logo.jpg" alt="sysgarage">
+           </a>
+			</div>
+      <label for="show-menu" class="show-menu">
+        <span class="icon-wrapper">
+              <i class="fa fa-bars"></i>
+        </span>
+      </label>
+      <input type="checkbox" id="show-menu" role="button">
+      <nav>
+        <ul class="nav-u">
+          <li class="nav-list active"><a href="#">Cards</a></li>
+          <li class="nav-list"><a href="#">Option 2</a></li>
+          <li class="nav-list"><a href="#">Option 3</a></li>
+          <li class="nav-list"><a href="#">Option 4</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="shadow"></section>
+    <section class="form-wrapper">
+        <h3 class="form-title">Input Form</h3>
+        <form class="input-form" method="post" action="#" >
+            <div class="input-wrapper">
+                <input type="text" value="John Doe" placeholder="Name" name="name" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="url" value="http://www.twoorist.com/resources/images/uploads/images/97714346f8b6a5c10d716643eee28a8e.jpg" placeholder="Avatar url" name="avatar" required>
+            </div>
+            <div class="input-wrapper">
+                <textarea placeholder="Description lorem ipsum" name="description" required>Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Morbi diam tortor, viverra eges tas arcu a, laor eet ferme ntum metus. Viva mus non elit ac orci tris tique aliq uam. Viva mus ac comm odo erat. Etiam grav ida egestas aliq uam.</textarea>
+            </div>
+            <div class="input-wrapper">
+                <input type="url" value="http://www.minimodelshop.co.uk/picture/SunStar-5207/vw-beetle-saloon-1963-diecast-model-car-sun-star-5207-p.jpg" placeholder="Img. url" name="img">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" value="Volkswagen" placeholder="Brand" name="brand" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" value="Beetle" placeholder="Model" name="model" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" value="Black" placeholder="Color" name="color" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="url" value="https://www.facebook.com/" placeholder="Facebook url" name="facebook" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="url" value="https://twitter.com/" placeholder="Twitter url" name="twitter" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="url" value="https://plus.google.com/" placeholder="Google + url" name="google" required>
+            </div>
+            <div class="input-wrapper">
+                <button type="button" name="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+    </section>
+    <section class="add">
+      <i class="fa fa-plus"></i>
+    </section>
+    <section class="container clearfix"></section>
+    <template id="cardTpl">
+        <div class="card">
+          <div class="header">
+              <div class="blur"></div>
+              <div class="opacity"></div>
+              <div class="avatar" ></div>
+              <h4 class="nya"></h4>
+              <label for="show-menu-card" class="show-menu-card">
+                <span class="menu-wrapper">
+                  <i class="fa fa-bars"></i>
+                </span>
+              </label>
+              <input type="checkbox" class="show-menu-card" role="button">
+              <ul class="menu-card-ul">
+                <li class="menu-card-li"><a class="clone-card" href="#" onClick="cloneCard(this)">clone</a></li>
+                <li class="menu-card-li"><a href="#" class="delete-card" onClick="deleteCard(this)">remove</a></li>
+              </ul>
+          </div>
+          <div class="media">
+              <div class="picture"></div>
+              <p class="general-text"></p>
+          </div>
+          <div class="lorem">
+            <table>
+              <tr>
+                <td>Brand:</td>
+                <td class="brand"></td>
+              </tr>
+              <tr>
+                <td>Model:</td>
+                <td class="model"></td>
+              </tr>
+              <tr>
+                <td>Color:</td>
+                <td class="color"></td>
+              </tr>
+            </table>
+          </div>
+          <div class="social-share">
+            <div class="social-icon facebook"><a href="" target="_blank"><i class="fa fa-facebook"></i></a></div>
+            <div class="social-icon twitter"><a href="" target="_blank"><i class="fa fa-twitter"></i></a></div>
+            <div class="social-icon google"><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></div>
+          </div>
+        </div>
+    </template>
+    <script>
+      function deleteCard(el) {
+        var elementToDelet = el.parentNode.parentNode.parentNode.parentNode;
+        elementToDelet.remove();
+      }
+      var board = document.querySelector('.container');
+      console.log
+      function cloneCard(el) {
+        var randomChar = Math.random().toString(36).substring(10);
+        var elementToClone = el.parentNode.parentNode.parentNode.parentNode;
+        var newCard = elementToClone.cloneNode(true);
+        board.appendChild(newCard);
+        newCard.querySelector('input.show-menu-card').setAttribute('id', randomChar);
+        newCard.querySelector('label.show-menu-card').setAttribute('for', randomChar);
+      }
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/domwriter.js"></script>
+  </body>
+</html>
