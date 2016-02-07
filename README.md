@@ -4,8 +4,7 @@ Material Design cards generator by a data form.
 Card-creator **tdont use jQuery** and the menus are only css.
 
 ### Create a new Card###
-![new card](http://delvallejonatan.com/cardcreator/img/1.png =250)
-
+<img src="http://delvallejonatan.com/cardcreator/img/1.png" width="200" height="200" />
 ### Load data###
 ![load data1](http://delvallejonatan.com/cardcreator/img/2.png =250)
 
