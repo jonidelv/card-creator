@@ -7,7 +7,7 @@ botonReg.addEventListener('click', function() {
     createCard(response);
   },
   function error(error) {
-    console.log(error);
+    createCard2( );
   });
 });
 

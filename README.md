@@ -1,7 +1,7 @@
 # card-creator
-Material Design cards generator by a data form.
+Material cards generator by a data form.
 
-Card-creator **tdont use jQuery** and the menus are only css.
+Card-creator use vanilla JS and the menus are only css.
 
 ## Create a new Card##
 <img src="http://delvallejonatan.com/cardcreator/img/1.png" width="100"/>
@@ -10,4 +10,3 @@ Card-creator **tdont use jQuery** and the menus are only css.
 <img src="http://delvallejonatan.com/cardcreator/img/3.png" width="252"/>
 ## Clone and Remove##
 <img src="http://delvallejonatan.com/cardcreator/img/4.png" width="300"/>
-
